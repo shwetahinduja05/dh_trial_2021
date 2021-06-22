@@ -21,7 +21,7 @@ node {
 		    * first, the incremental build number from Jenkins
 		    * second, the 'latest' tag */
 		         docker.withRegistry('https://hub.docker.com/', 'docker-hub-credentials'){
-			 app.push("$(env.BUILD_NUMBER)")
+			 app.push("${env.BUILD_NUMBER}")
 			 app.push("latest")
 		     }
 		 }
