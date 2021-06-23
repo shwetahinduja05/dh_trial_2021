@@ -1,6 +1,8 @@
 # use a node base image
 FROM node:7-onbuild
 
+USER root
+
 # set a maintainer
 LABEL maintainer "shwetahinduja05@gmail.com"
 
