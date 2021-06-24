@@ -20,7 +20,7 @@ node {
 		   /* We will push the image to docker hub with two tags:
 		    * first, the incremental build number from Jenkins
 		    * second, the 'latest' tag */
-		         docker.withRegistry('https://hub.docker.com/', 'docker-hub-credentials'){
+		         docker.withRegistry('https://registry.hub.docker.com/', 'docker-hub-credentials'){
 			 app.push("${env.BUILD_NUMBER}")
 			 app.push("latest")
 		     }
